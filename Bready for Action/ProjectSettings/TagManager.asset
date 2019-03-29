@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Terrain
+  - Child
+  - Player
   - 
   - 
   - 
@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Front
+    uniqueID: 1614168057
+    locked: 0
+  - name: Player
+    uniqueID: 1362055183
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2034336703
+    locked: 0
+  - name: Map Area
+    uniqueID: 2299405683
     locked: 0
