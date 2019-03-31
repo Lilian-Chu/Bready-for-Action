@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     public Transform feetPos;
     public float checkRadius;
-    public LayerMask whatIsGround;
+    public LayerMask[] whatIsGround;
 
     private float jumpTimeCounter;
     public float jumpTime;
@@ -35,10 +35,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //Checks if player is on the ground
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        //Player can only jump when touching ground
+        //Checks if player is on the ground
+        for (int i = 0; i < whatIsGround.Length; i++)
+        {
+            if (Physics2D.OverlapCircle(feetPos.position,checkRadius,whatIsGround[i]))
+            {
+                isGrounded = true;
+                break;
+            }
+            else
+            {
+                isGrounded = false;
+            }
+        }
+
+        //Player can only jump when touching ground, or other players
         if (isGrounded && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
         {
             isJumping = true;
