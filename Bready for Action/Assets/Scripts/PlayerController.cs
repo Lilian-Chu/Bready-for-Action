@@ -37,16 +37,14 @@ public class PlayerController : MonoBehaviour
     {
 
         //Checks if player is on the ground
+
+        isGrounded = false;
         for (int i = 0; i < whatIsGround.Length; i++)
         {
-            if (Physics2D.OverlapCircle(feetPos.position,checkRadius,whatIsGround[i]))
+            if (Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround[i]))
             {
                 isGrounded = true;
-                break;
-            }
-            else
-            {
-                isGrounded = false;
+                Debug.Log("Grounded");
             }
         }
 
