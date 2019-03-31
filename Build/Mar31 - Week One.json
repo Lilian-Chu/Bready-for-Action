@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Bready for Action",
+"dataUrl": "Mar31 - Week One.data.unityweb",
+"wasmCodeUrl": "Mar31 - Week One.wasm.code.unityweb",
+"wasmFrameworkUrl": "Mar31 - Week One.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}
