@@ -14,9 +14,9 @@ public class PlayerControllerNew : MonoBehaviour
     private bool facingRight = true;
 
     private bool isGrounded;
-    public Transform groundCheck;
+    public Transform feetPos;
     public float checkRadius;
-    public LayerMask whatIsGround;
+    public LayerMask[] whatIsGround;
 
     private int extraJumps;
     public int extraJumpValue;
@@ -29,9 +29,20 @@ public class PlayerControllerNew : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        isGrounded = false;
+        for (int i = 0; i < whatIsGround.Length; i++)
+        {
+            if (Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround[i]))
+            {
+                isGrounded = true;
+                Debug.Log("Grounded");
+            }
+        }
+
+
+        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         moveInput = Input.GetAxis("Horizontal");
         Debug.Log(moveInput);
