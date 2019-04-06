@@ -37,7 +37,7 @@ public class PlayerControllerNew : MonoBehaviour
             if (Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround[i]))
             {
                 isGrounded = true;
-                Debug.Log("Grounded");
+                //Debug.Log("Grounded");
             }
         }
 
@@ -45,7 +45,7 @@ public class PlayerControllerNew : MonoBehaviour
         //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         moveInput = Input.GetAxis("Horizontal");
-        Debug.Log(moveInput);
+        //Debug.Log(moveInput);
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
         if(facingRight == false && moveInput > 0)
@@ -61,15 +61,17 @@ public class PlayerControllerNew : MonoBehaviour
             extraJumps = extraJumpValue;
         }
 
-        if(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps > 0)
+        if((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && extraJumps > 0)
+        //(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
-            Debug.Log("Hello");
+            //Debug.Log("Hello");
         }
-        else if(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps == 0 && isGrounded == true)
+        else if((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && extraJumps == 0 && isGrounded == true)
+        //(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps == 0 && isGrounded == true)
         {
-            Debug.Log("hi");
+            //Debug.Log("hi");
             rb.velocity = Vector2.up * jumpForce;
         }
     }

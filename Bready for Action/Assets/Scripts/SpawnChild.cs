@@ -9,11 +9,21 @@ public class SpawnChild : MonoBehaviour
     public Transform[] spawnPositions;
 
     [HideInInspector] public int typePos;
+    [HideInInspector] public int spawnPos;
+    [HideInInspector] public GameObject[] children;
+    [HideInInspector] public int maxSpawns;
+
+    [HideInInspector] public int currentControl;
 
     // Start is called before the first frame update
     void Start()
     {
         typePos = 0;
+        spawnPos = 0;
+        maxSpawns = 4;
+        children = new GameObject[maxSpawns];
+
+        currentControl = 0;
 
     }
 
@@ -22,11 +32,32 @@ public class SpawnChild : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //Instantiate(childTypes[typePos], SpawnChild.ChoosePos(), new Quaternion(0,0,0,0));
+            Spawn();
+        }
+    }
+
+    void Spawn()
+    {
+        bool isFull = false;
+        for (int i = children.Length; i >= 0; i--)
+        {
+            if(children[i] == null)
+            {
+                isFull = true;
+                spawnPos = i;
+            }
+        }
+        if (!isFull)
+        {
             Instantiate(childTypes[typePos], spawnPositions[0].position, new Quaternion(0, 0, 0, 0));
         }
     }
 
+    void DestroyChild(int childPos)
+    {
+        Destroy(children[childPos]);
+        children[childPos] = null;
+    }
 
     /*
     private Vector3 ChoosePos()
@@ -35,7 +66,7 @@ public class SpawnChild : MonoBehaviour
         {
             if (!hitToTest.collider.bounds.Contains(telePosition))
             {
-                print("point is inside collider");
+                Debug.Log("point is inside collider");
             }
         }
     }
