@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class SpawnChild : MonoBehaviour
 {
-
+    //childTypes stores prefabs for children; will toggle by entering map area
     public GameObject[] childTypes;
+    //spawnPositions stores locations for spawning children
     public Transform[] spawnPositions;
 
+    //typePos stores which prefab in childTypes will spawn; will toggle with map area
     [HideInInspector] public int typePos;
+    //spawnPos stores the location in the children array where a child will be stored
     [HideInInspector] public int spawnPos;
+    //children is the list of children; used to change player controller
     [HideInInspector] public GameObject[] children;
     [HideInInspector] public int maxSpawns;
-
-    [HideInInspector] public int currentControl;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +24,6 @@ public class SpawnChild : MonoBehaviour
         spawnPos = 0;
         maxSpawns = 4;
         children = new GameObject[maxSpawns];
-
-        currentControl = 0;
-
     }
 
     // Update is called once per frame
@@ -38,18 +37,19 @@ public class SpawnChild : MonoBehaviour
 
     void Spawn()
     {
-        bool isFull = false;
-        for (int i = children.Length; i >= 0; i--)
+        bool isFull = true;
+        for (int i = children.Length - 1; i >= 0; i--)
         {
             if(children[i] == null)
             {
-                isFull = true;
+                isFull = false;
                 spawnPos = i;
             }
         }
         if (!isFull)
         {
-            Instantiate(childTypes[typePos], spawnPositions[0].position, new Quaternion(0, 0, 0, 0));
+            children[spawnPos] = Instantiate(childTypes[typePos], spawnPositions[0].position, new Quaternion(0, 0, 0, 0));
+            children[spawnPos].GetComponent<ChangeController>().thisPos = 2 + spawnPos;
         }
     }
 

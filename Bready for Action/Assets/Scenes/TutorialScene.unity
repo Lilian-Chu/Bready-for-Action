@@ -193,9 +193,11 @@ GameObject:
   - component: {fileID: 195409956}
   - component: {fileID: 195409955}
   - component: {fileID: 195409960}
+  - component: {fileID: 195409962}
+  - component: {fileID: 195409961}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,6 +221,8 @@ MonoBehaviour:
   whatIsGround:
   - serializedVersion: 2
     m_Bits: 256
+  - serializedVersion: 2
+    m_Bits: 512
   extraJumpValue: 2
 --- !u!61 &195409956
 BoxCollider2D:
@@ -258,7 +262,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -351,6 +355,33 @@ MonoBehaviour:
   spawnPos: 0
   children: []
   maxSpawns: 0
+--- !u!114 &195409961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195409954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9a9f2cc232c54d9f98aadd2e69c1774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current: 0
+  currentControl: {fileID: 0}
+--- !u!114 &195409962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195409954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f5da9bebe65444c4b35da3dcd64849e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisPos: 1
 --- !u!4 &218868727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3679310315194921076, guid: 65f8384bef7404ef5a33653c7508dfea,
