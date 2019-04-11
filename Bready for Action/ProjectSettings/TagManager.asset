@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Lava
+  - Interactable
   layers:
   - Default
   - TransparentFX
