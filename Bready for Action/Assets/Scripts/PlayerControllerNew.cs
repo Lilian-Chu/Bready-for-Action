@@ -106,4 +106,17 @@ public class PlayerControllerNew : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
+
+    void OnCollisionEnter2D(Collision2D col){
+        if(col.gameObject.tag=="Lava" && gameObject.name == "player")
+        {
+            Debug.Log("yo");
+
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("NO");
+        }
+    }
 }
