@@ -111,6 +111,13 @@ public class PlayerControllerNew : MonoBehaviour
         if(col.gameObject.tag=="Lava" && gameObject.name == "player")
         {
             gameObject.SetActive(false);
-        }   
+        }
+        // else if(col.gameObject.tag=="Water" && gameObject.tag == "Child")
+        // {
+        //     Destroy(gameObject);
+        // }
+        // else
+        // {
+        // }
     }
 }

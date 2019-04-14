@@ -5,6 +5,8 @@ using UnityEngine;
 public class ButtonBehavior : MonoBehaviour
 {
 
+    public string levelToLoad;
+
     public Sprite Pressed;
 
     [SerializeField] private PolygonCollider2D[] colliders;
@@ -16,6 +18,14 @@ public class ButtonBehavior : MonoBehaviour
         colliders[currentColliderIndex].enabled = true;
         isPressed = false;
     }
+
+    // public void update()
+    // {
+    //     if(isPressed == true)
+    //     {
+    //         Application.LoadLevelAsync(levelToLoad);
+    //     }
+    // }
 
     public void SetColliderForSprite(int spriteNum)
     {
@@ -29,5 +39,6 @@ public class ButtonBehavior : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
         isPressed = true;
         SetColliderForSprite(1);
+        Application.LoadLevelAsync(levelToLoad);
     }
 }
