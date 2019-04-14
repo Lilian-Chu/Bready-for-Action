@@ -33,8 +33,6 @@ public class ChangeController : MonoBehaviour
             current.currentControl.GetComponent<PlayerControllerNew>().enabled = false;
             GetComponent<PlayerControllerNew>().enabled = true;
 
-
-
             current.current = thisPos;
             current.currentControl = this.gameObject;
             //Debug.Log(thisPos);
