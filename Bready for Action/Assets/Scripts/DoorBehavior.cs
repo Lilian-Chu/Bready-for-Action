@@ -40,7 +40,7 @@ public class DoorBehavior : MonoBehaviour
         if (isOpen && thisPos == 1)
         {
             isNear = true;
-            //Debug.Log("Close");
+            Debug.Log("Close");
         }
     }
 
@@ -51,7 +51,7 @@ public class DoorBehavior : MonoBehaviour
         if (isOpen && thisPos == 1)
         {
             isNear = false;
-            //Debug.Log("Not close");
+            Debug.Log("Not close");
         }
     }
 
@@ -59,6 +59,7 @@ public class DoorBehavior : MonoBehaviour
     {
         isOpen = true;
         gameObject.GetComponent<SpriteRenderer>().sprite = Opened;
+        Debug.Log("open");
     }
 }
 

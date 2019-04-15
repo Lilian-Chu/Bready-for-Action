@@ -256,7 +256,7 @@ PrefabInstance:
     - target: {fileID: 8653729374702093272, guid: cc3b99f54661646598a7111eeb68bd9e,
         type: 3}
       propertyPath: currentLevel
-      value: Level 3
+      value: Level 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc3b99f54661646598a7111eeb68bd9e, type: 3}
@@ -1052,7 +1052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799023933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.7, y: -7.73, z: 0.073662244}
+  m_LocalPosition: {x: -26.3, y: -7.73, z: 0.073662244}
   m_LocalScale: {x: 1.3007, y: 1.3007, z: 1.3007}
   m_Children: []
   m_Father: {fileID: 700812401}
@@ -1915,12 +1915,12 @@ PrefabInstance:
     - target: {fileID: 3679310315194921076, guid: 65f8384bef7404ef5a33653c7508dfea,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.34
+      value: 2.52
       objectReference: {fileID: 0}
     - target: {fileID: 3679310315194921076, guid: 65f8384bef7404ef5a33653c7508dfea,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.74
+      value: -3.81
       objectReference: {fileID: 0}
     - target: {fileID: 3679310315194921076, guid: 65f8384bef7404ef5a33653c7508dfea,
         type: 3}
@@ -1972,16 +1972,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 2.25
       objectReference: {fileID: 0}
-    - target: {fileID: 3679310315194921077, guid: 65f8384bef7404ef5a33653c7508dfea,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3679310315194921074, guid: 65f8384bef7404ef5a33653c7508dfea,
         type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 29eb980a5011941209fcc940e4d5aba0, type: 2}
+    - target: {fileID: 3679310315194921077, guid: 65f8384bef7404ef5a33653c7508dfea,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65f8384bef7404ef5a33653c7508dfea, type: 3}
 --- !u!4 &1271224772 stripped
@@ -2192,12 +2192,12 @@ PrefabInstance:
     - target: {fileID: 6115013073886809097, guid: da06dc7746ac9410094e26886e3edd58,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.8
+      value: -31.9
       objectReference: {fileID: 0}
     - target: {fileID: 6115013073886809097, guid: da06dc7746ac9410094e26886e3edd58,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.5
+      value: -8.27
       objectReference: {fileID: 0}
     - target: {fileID: 6115013073886809097, guid: da06dc7746ac9410094e26886e3edd58,
         type: 3}
@@ -2370,12 +2370,12 @@ PrefabInstance:
     - target: {fileID: 581940136790212970, guid: a2cca53472def47daa9904402109d7b0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.4
+      value: 4.36
       objectReference: {fileID: 0}
     - target: {fileID: 581940136790212970, guid: a2cca53472def47daa9904402109d7b0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.1
+      value: -2.11
       objectReference: {fileID: 0}
     - target: {fileID: 581940136790212970, guid: a2cca53472def47daa9904402109d7b0,
         type: 3}
@@ -2640,7 +2640,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 101057e96134a48ee89613e2e0e0b2f2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 86da17229996a49c993993f4837b9789, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2784,7 +2784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686301020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 0, z: -20}
+  m_LocalPosition: {x: -12.6, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2918,12 +2918,13 @@ MonoBehaviour:
   dialogue:
     name: Wise Owl
     sentances:
-    - Folks think they can touch the lava because the children can do it.
-    - "Doesn\u2019t work like that."
-    - According to those scientists, the children are fine because the heart of The
-      Fountain flows within them, protecting them.
-    - Strange, huh? The ability to create children comes from The Fountain, but going
-      to The Fountain takes that power away.
+    - Foolish travelers think they can touch the lava because the children can do
+      it.
+    - "Unfortuntely, it doesn\u2019t work like that."
+    - According to studies, the children survive because the heart of The Fountain
+      flows within them, protecting them from the lava.
+    - Strange, is it not? The ability to create children originates from The Fountain,
+      but finding The Fountain takes that power away.
 --- !u!114 &1975555119
 MonoBehaviour:
   m_ObjectHideFlags: 0
