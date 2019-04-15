@@ -5,9 +5,11 @@ using UnityEngine;
 public class ButtonBehavior : MonoBehaviour
 {
 
-    public string levelToLoad;
+    //public string levelToLoad;
 
     public Sprite Pressed;
+
+    public DoorBehavior Door;
 
     [SerializeField] private PolygonCollider2D[] colliders;
     private int currentColliderIndex = 0;
@@ -39,6 +41,7 @@ public class ButtonBehavior : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite = Pressed;
         isPressed = true;
         SetColliderForSprite(1);
-        Application.LoadLevelAsync(levelToLoad);
+        Door.Open();
+        //Application.LoadLevelAsync(levelToLoad);
     }
 }
