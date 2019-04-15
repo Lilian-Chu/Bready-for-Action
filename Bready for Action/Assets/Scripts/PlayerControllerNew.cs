@@ -107,17 +107,22 @@ public class PlayerControllerNew : MonoBehaviour
         transform.localScale = Scaler;
     }
 
-    void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.tag=="Lava" && gameObject.name == "player")
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag=="Lava" && gameObject.tag == "Player")
         {
             gameObject.SetActive(false);
         }
-        // else if(col.gameObject.tag=="Water" && gameObject.tag == "Child")
-        // {
-        //     Destroy(gameObject);
-        // }
-        // else
-        // {
-        // }
+        else if(col.gameObject.tag=="Water" && gameObject.tag == "Child")
+        {
+            //Debug.Log("Water");
+            int childPos = gameObject.GetComponent<ChangeController>().thisPos - 2;
+            Debug.Log(childPos);
+            GameObject.FindWithTag("Player").GetComponent<SpawnChild>().DestroyChild(childPos);
+        }
+        else
+        {
+
+        }
     }
 }

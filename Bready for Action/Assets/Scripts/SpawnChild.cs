@@ -53,10 +53,13 @@ public class SpawnChild : MonoBehaviour
         }
     }
 
-    void DestroyChild(int childPos)
+    public void DestroyChild(int childPos)
     {
+        GameObject.FindWithTag("Player").GetComponent<ChangeController>().ChangeTo();
+
         Destroy(children[childPos]);
         children[childPos] = null;
+
     }
 
     /*

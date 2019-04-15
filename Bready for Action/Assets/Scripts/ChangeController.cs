@@ -21,21 +21,31 @@ public class ChangeController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha0 + thisPos))
         {
-            if (current.GetComponent<SpawnChild>() != null)
-            {
-                current.GetComponent<SpawnChild>().enabled = false;
-            }
-            if (this.gameObject.GetComponent<SpawnChild>() != null)
-            {
-                this.gameObject.GetComponent<SpawnChild>().enabled = true;
-            }
-
-            current.currentControl.GetComponent<PlayerControllerNew>().enabled = false;
-            GetComponent<PlayerControllerNew>().enabled = true;
-
-            current.current = thisPos;
-            current.currentControl = this.gameObject;
-            //Debug.Log(thisPos);
+            ChangeTo();
         }
     }
+
+    public void ChangeTo()
+    {
+        if (current.GetComponent<SpawnChild>() != null)
+        {
+            current.GetComponent<SpawnChild>().enabled = false;
+        }
+        if (this.gameObject.GetComponent<SpawnChild>() != null)
+        {
+            this.gameObject.GetComponent<SpawnChild>().enabled = true;
+        }
+        if (current.currentControl.GetComponent<PlayerControllerNew>() != null)
+        {
+            current.currentControl.GetComponent<PlayerControllerNew>().enabled = false;
+        }
+
+        //current.currentControl.GetComponent<PlayerControllerNew>().enabled = false;
+        GetComponent<PlayerControllerNew>().enabled = true;
+
+        current.current = thisPos;
+        current.currentControl = this.gameObject;
+        //Debug.Log(thisPos);
+    }
+
 }

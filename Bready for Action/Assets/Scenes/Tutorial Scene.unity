@@ -891,7 +891,7 @@ PrefabInstance:
     - target: {fileID: 581940136790212972, guid: a2cca53472def47daa9904402109d7b0,
         type: 3}
       propertyPath: levelToLoad
-      value: Level2
+      value: Level 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2cca53472def47daa9904402109d7b0, type: 3}
@@ -1593,12 +1593,12 @@ PrefabInstance:
     - target: {fileID: 6115013073886809097, guid: da06dc7746ac9410094e26886e3edd58,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.52
+      value: -9.5
       objectReference: {fileID: 0}
     - target: {fileID: 6115013073886809097, guid: da06dc7746ac9410094e26886e3edd58,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.29
+      value: 6.66
       objectReference: {fileID: 0}
     - target: {fileID: 6115013073886809097, guid: da06dc7746ac9410094e26886e3edd58,
         type: 3}
@@ -1738,6 +1738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5343807345299128035, guid: 207c93e66b8904e37920cccbe1c239d4,
+        type: 3}
+      propertyPath: whatIsGround.Array.size
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 207c93e66b8904e37920cccbe1c239d4, type: 3}
