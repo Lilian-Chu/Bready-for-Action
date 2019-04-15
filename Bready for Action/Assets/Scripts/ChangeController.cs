@@ -7,6 +7,7 @@ public class ChangeController : MonoBehaviour
     //thisPos is the position of the GameObject this script is attached to.
     //Determined by this object's position in children
     public int thisPos;
+    public SpriteRenderer Pointer;
 
     private CurrentController current;
 
@@ -38,6 +39,16 @@ public class ChangeController : MonoBehaviour
         if (current.currentControl.GetComponent<PlayerControllerNew>() != null)
         {
             current.currentControl.GetComponent<PlayerControllerNew>().enabled = false;
+        }
+        if (current.currentControl.GetComponent<ChangeController>().Pointer != null)
+        {
+            //Debug.Log("unpoint");
+            current.currentControl.GetComponent<ChangeController>().Pointer.enabled = false;
+        }
+        if (Pointer != null)
+        {
+            //Debug.Log("Point");
+            Pointer.enabled = true;
         }
 
         //current.currentControl.GetComponent<PlayerControllerNew>().enabled = false;
